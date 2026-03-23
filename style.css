@@ -517,3 +517,56 @@ nav a:hover {
         display: grid !important;
     }
 }
+
+/* --- Responsiveness for Mobile (أضيفيه في آخر ملف الـ CSS) --- */
+@media (max-width: 768px) {
+    
+    /* 1. تصليح الـ Grid للمنتجات (نيو أرايفال) */
+    .grid-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* جبر الـ 2 عمود للموبايل */
+        gap: 15px !important; /* مسافة بسيطة بين المنتجات */
+        padding: 0 4% !important; /* مسافة بسيطة من الجوانب */
+        width: 92% !important; /* عرض الـ Grid عشان يملأ الشاشة */
+        margin: 0 auto !important; /* عشان الـ Grid يجي في النص */
+    }
+
+    /* 2. تصليح كارد المنتج نفسه للموبايل */
+    .product-card {
+        padding: 10px !important; /* تقليل المسافة جوه الكارد الأبيض */
+    }
+
+    .product-img {
+        height: 180px !important; /* طول مناسب جداً للموبايل */
+    }
+
+    .product-img img {
+        width: 85% !important; /* تصغير الصورة شوية عشان متخبطش في الجوانب */
+    }
+
+    .product-info h3 {
+        font-size: 14px; /* تصغير اسم النظارة */
+        margin-top: 5px;
+    }
+
+    .product-info p {
+        font-size: 13px; /* تصغير السعر */
+        margin-top: 2px;
+    }
+
+    /* 3. تصليح الـ Navbar للموبايل */
+    nav {
+        padding: 15px 4% !important; /* جبر المسافة */
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    .logo {
+        font-size: 18px !important;
+    }
+
+    .cart-icon {
+        font-size: 12px !important;
+        margin-left: auto !important; /* يظبط مكان الكارت */
+    }
+}
