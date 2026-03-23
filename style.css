@@ -504,3 +504,16 @@ nav a:hover {
         font-size: 40px; /* تصغير العنوان الكبير عشان ميبقاش ضخم */
     }
 }
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 4% !important; /* جبر المسافة */
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr) !important; /* جبر الـ 2 كولوم */
+        display: grid !important;
+    }
+}
