@@ -460,3 +460,47 @@ nav a:hover {
         gap: 40px;
     }
 }
+
+/* --- Responsiveness for Mobile --- */
+@media (max-width: 768px) {
+    
+    /* 1. تصليح الـ Navbar */
+    nav {
+        padding: 20px 4%; /* تقليل المسافات الجانبية */
+        flex-wrap: wrap; /* عشان العناصر متدخلش في بعض */
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 18px; /* تصغير اللوجو شوية */
+        letter-spacing: 2px;
+    }
+
+    nav ul {
+        display: none; /* يفضل نخفي المنيو في الموبايل أو نخليها تحت بعض (مؤقتاً هنخفيها للشياكة) */
+    }
+
+    .cart-icon {
+        font-size: 12px;
+        margin-left: auto; /* يظبط مكان الكارت */
+    }
+
+    /* 2. تصليح الـ New Arrival (الـ Grid) */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 منتج بس في الصف بدل 3 أو 6 */
+        gap: 15px; /* تقليل المسافات بين المربعات */
+    }
+
+    .product-img {
+        height: 200px; /* تحديد طول مناسب للموبايل عشان متبقاش طويلة أوي */
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    /* 3. تصليح الـ Hero Section للموبايل */
+    .hero h1 {
+        font-size: 40px; /* تصغير العنوان الكبير عشان ميبقاش ضخم */
+    }
+}
