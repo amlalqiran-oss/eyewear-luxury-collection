@@ -1,0 +1,462 @@
+/* الإعدادات العامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F7F2; /* لون بيج هادي جداً */
+    color: #2D2D2D; /* رمادي داكن مريح للعين */
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* التنسيق العلوي (Navbar) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 6%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2D2D2D;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #A68B6D; /* ذهبي مطفي عند المرور */
+}
+
+/* الجزء الرئيسي (Hero Section) */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #A68B6D;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px; /* خط كبير ومبهر */
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* الزرار الاحترافي */
+.btn-primary {
+    background-color: #2D2D2D;
+    color: #F9F7F2;
+    border: none;
+    padding: 18px 45px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+    background-color: #A68B6D;
+    transform: translateY(-5px); /* حركة انسيابية خفيفة */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.collection {
+    padding: 100px 6%;
+    background-color: #F9F7F2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: #A68B6D;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #FFF; /* خلفية بيضاء للمنتج تبرزه عن البيج */
+    padding: 20px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* حركة الارتفاع عند الماوس */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.product-img {
+    background-color: #F3F1ED; /* خلفية رمادية خفيفة جداً تحت صورة النظارة */
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 80%;
+    transition: 0.5s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.1); /* زووم خفيف للصورة عند الماوس */
+}
+
+.product-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    color: #A68B6D;
+    font-weight: 500;
+}
+
+.about-section {
+    padding: 120px 6%;
+    background-color: #FDFCF8; /* درجة أهدى شوية للتنويع */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* مسافة واسعة بين الصورة والكلام للشياكة */
+}
+
+.about-image {
+    flex: 1; /* ياخد نص المساحة */
+    height: 600px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* عشان الصورة تملأ المكان من غير ما تتمط */
+    transition: 0.6s ease;
+}
+
+.about-text {
+    flex: 1; /* ياخد النص التاني */
+    padding-right: 50px;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+/* لينك الـ Read More الشيك */
+.read-more {
+    text-decoration: none;
+    color: #2D2D2D;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #A68B6D; /* خط تحت الكلام بدل الـ background */
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    color: #A68B6D;
+    border-bottom: 1px solid #2D2D2D;
+}
+
+/* حركة الموبايل: لما الشاشة تصغر، الصورة تبقى فوق الكلام */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about-image {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.brands-grid-section {
+    padding: 100px 6%;
+    background-color: #F9F7F2;
+    text-align: center;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 براندات جنب بعض */
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.brand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #FFF; /* خلفية بيضاء تنطق اللوجو */
+    border: 1px solid #F1EDE4; /* إطار خفيف جداً */
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.brand-card:hover {
+    background-color: #FFF;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(166, 139, 109, 0.1); /* ظل خفيف بلون ذهبي مطفي */
+}
+
+.brand-logo {
+    height: 60px; /* ثبتي الارتفاع عشان اللوجوهات تكون متساوية */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo img {
+    max-width: 120px;
+    max-height: 100%;
+    filter: grayscale(100%); /* يخلي كل اللوجوهات أبيض وأسود للشياكة */
+    opacity: 0.6;
+    transition: 0.4s ease;
+}
+
+.brand-card:hover .brand-logo img {
+    filter: grayscale(0%); /* يرجع الألوان الأصلية لما الماوس يلمس الكارد */
+    opacity: 1;
+    transform: scale(1.05); /* زووم بسيط جداً */
+}
+
+.brand-name {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.brand-card:hover .brand-name {
+    color: #A68B6D; /* يقلب ذهبي عند الماوس */
+}
+
+/* للموبايل: نخليهم 2 بدل 4 */
+@media (max-width: 768px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.instagram-section {
+    padding: 100px 0 0 0; /* مفيش مسافة تحت عشان يلحم في الـ Footer */
+    background-color: #F9F7F2;
+    text-align: center;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 صور جنب بعض */
+    margin-top: 50px;
+}
+
+.insta-item {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* عشان الصور متتمطش مهما كان مقاسها */
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.insta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(166, 139, 109, 0.4); /* تظليل بلون ذهبي مطفي شفاف */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.insta-item:hover img {
+    transform: scale(1.1); /* زووم هادي جداً */
+}
+
+.insta-item:hover .insta-overlay {
+    opacity: 1; /* التظليل يظهر عند الماوس */
+}
+
+/* للموبايل: نخليهم صورتين بس جنب بعض */
+@media (max-width: 768px) {
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.main-footer {
+    background-color: #2D2D2D; /* لون داكن شيك */
+    color: #F9F7F2;
+    padding: 80px 6% 30px 6%;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* اللوجو بياخد مساحة أكبر */
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    color: #AAA;
+    line-height: 1.8;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #A68B6D; /* اللون الذهبي المطفي */
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a, .social-icons a {
+    text-decoration: none;
+    color: #AAA;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover, .social-icons a:hover {
+    color: #F9F7F2;
+    padding-left: 5px; /* حركة انزلاق بسيطة */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
